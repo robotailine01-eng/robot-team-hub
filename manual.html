@@ -1,8 +1,176 @@
 <!doctype html>
 <html lang="th">
-<head><meta charset="utf-8"><title>คู่มือยัดแผล V2</title></head>
-<body style="background:#030405;color:#FFD700;font-family:system-ui;padding:24px">
-<h1>คู่มือยัดแผล V2</h1>
-<p style="color:#FFEE99">Gold VIP Casino Theme</p>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>คู่มือยัดแผล V2 | VIP</title>
+<style>
+
+:root{
+ --bg:#030405;
+ --panel:#080b11;
+ --line:#2a2a2a;
+ --text:#ffffff;
+ --muted:rgba(255,255,255,.75);
+ --gold:#FFD700;
+ --gold-strong:#FFEE99;
+ --gold2:#FFC400;
+ --glow:rgba(255,215,0,.65);
+ --glow2:rgba(255,238,153,.35);
+}
+*{box-sizing:border-box}
+body{
+ margin:18px;
+ font-family:system-ui,Segoe UI,Tahoma;
+ background:
+ radial-gradient(900px 480px at 18% -12%, rgba(255,215,0,.34), transparent 55%),
+ radial-gradient(700px 380px at 92% 12%, rgba(255,238,153,.22), transparent 60%),
+ linear-gradient(180deg,#020304,#05070b);
+ color:var(--text);
+}
+a{color:var(--gold);}
+@keyframes shimmer{
+ 0%{background-position:0% 50%}
+ 100%{background-position:200% 50%}
+}
+.shimmer{
+ background:linear-gradient(110deg, rgba(255,215,0,.15), rgba(255,238,153,.55), rgba(255,196,0,.12), rgba(255,238,153,.45));
+ background-size:200% 100%;
+ animation:shimmer 6.5s linear infinite;
+}
+.header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{
+ width:64px;height:64px;border-radius:18px;overflow:hidden;
+ border:2px solid var(--gold);
+ box-shadow:0 0 25px var(--glow),0 18px 60px rgba(0,0,0,.8)
+}
+.logo img{width:100%;height:100%;object-fit:cover}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{font-size:13px;color:var(--muted)}
+.badge{
+ display:inline-flex;align-items:center;gap:8px;
+ padding:10px 14px;border-radius:999px;
+ border:1px solid rgba(255,215,0,.55);
+ box-shadow:0 10px 28px rgba(255,215,0,.18);
+}
+.badge span{font-weight:900;color:#111}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 18px}
+.pill{
+ padding:10px 18px;border-radius:999px;
+ border:1px solid #ffcf40;
+ color:#111;font-weight:900;text-decoration:none;
+ box-shadow:0 8px 26px rgba(255,215,0,.55);
+}
+.pill:hover{filter:brightness(1.08)}
+.table-wrap{
+ border-radius:20px;
+ overflow:hidden;
+ border:1px solid #3a3a3a;
+ box-shadow:0 24px 80px rgba(0,0,0,.75);
+ background:linear-gradient(180deg,#0a0d14,#06080c);
+}
+table{width:100%;border-collapse:collapse}
+th,td{padding:14px;border-bottom:1px solid #242424;vertical-align:middle}
+th{
+ background:#05070c;
+ color:var(--gold);
+ font-weight:900;
+ letter-spacing:.4px
+}
+tr:hover td{background:rgba(255,215,0,.08)}
+.btn{
+ display:inline-block;
+ padding:10px 18px;border-radius:16px;
+ background:linear-gradient(180deg,var(--gold-strong),var(--gold));
+ color:#111;font-weight:1000;text-decoration:none;
+ box-shadow:0 10px 28px rgba(255,215,0,.65);
+ margin-right:6px; white-space:nowrap
+}
+.btn:hover{filter:brightness(1.06)}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:8px 0 14px}
+input{
+ padding:12px 14px;border-radius:14px;
+ border:1px solid rgba(255,215,0,.28);
+ background:#05070c;color:var(--text);min-width:260px;outline:none;
+ box-shadow:inset 0 0 0 1px rgba(255,215,0,.08);
+}
+input:focus{
+ border-color:rgba(255,215,0,.65);
+ box-shadow:0 0 0 3px rgba(255,215,0,.15), inset 0 0 0 1px rgba(255,215,0,.12);
+}
+.hint{color:var(--muted);font-size:12px}
+@media (max-width: 720px){
+ body{margin:14px}
+ h1{font-size:18px}
+ .logo{width:54px;height:54px;border-radius:16px}
+ .badge{width:100%;justify-content:center}
+ .table-wrap{border-radius:18px}
+ table, thead, tbody, th, td, tr{display:block}
+ thead{display:none}
+ tr{
+  border-bottom:1px solid #242424;
+  padding:12px 12px 14px;
+ }
+ td{border:none;padding:6px 0}
+ td:first-child{color:var(--gold);font-weight:900}
+ .rowtitle{font-weight:900;color:var(--gold-strong);margin-top:4px}
+ .btn{margin:6px 8px 0 0; padding:10px 14px; border-radius:14px}
+}
+
+.wrap{max-width:980px;margin:auto}
+.card{
+  background:linear-gradient(180deg,#0a0d14,#06080c);
+  border:1px solid #3a3a3a;border-radius:20px;padding:16px;margin:12px 0;
+  box-shadow:0 24px 80px rgba(0,0,0,.65)
+}
+h2{margin:0 0 8px;color:var(--gold)}
+code{background:#05070c;border:1px solid rgba(255,215,0,.25);padding:2px 8px;border-radius:12px}
+iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:20px;box-shadow:0 16px 60px rgba(0,0,0,.7)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="brand">
+      <div class="logo"><img src="assets/logo.jpg" alt="ROBOT AI"></div>
+      <div>
+        <h1>คู่มือยัดแผล V2</h1>
+        <div class="sub">👑 VIP Theme • ลายทองวิ่งเบา ๆ (Shimmer) • Responsive</div>
+      </div>
+    </div>
+    <div class="badge shimmer"><span>🔥 GOLD VIP</span></div>
+  </div>
+
+  <div class="nav">
+    <a class="pill shimmer" href="index.html">⬅️ กลับหน้า Team Hub</a>
+    <a class="pill shimmer" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s">▶️ คู่มือ V1 (YouTube)</a>
+  </div>
+
+  <div class="card">
+    <h2>สรุปโหมดการทำงาน</h2>
+    <ul>
+      <li><b>โหมดยัดเท่านั้น</b> — ยัดแผล “คู่ปัจจุบันทันที” (สำหรับแผลที่ยังไม่ประกาศผล)</li>
+      <li><b>โหมดยัดแผล + ปรับยอด</b> — เลือกรอบเพื่อยัดแผลย้อนหลัง + เพิ่ม/ปรับยอดได้เสีย (สำหรับแผลที่ประกาศผลแล้ว)</li>
+      <li><b>โหมดปรับยอดเท่านั้น</b> — สำหรับปรับยอดกรณี “เผลอปรับผิด” หรือ “ยัดผิดจากโหมดอื่น”</li>
+    </ul>
+    <div class="hint" style="margin-top:10px">แนะนำ: เช็กโหมด + รอบ + ตัวอย่างก่อน/หลัง ทุกครั้งก่อนกดบันทึก</div>
+  </div>
+
+  <div class="card">
+    <h2>ตัวอย่างคำสำคัญที่ต้องเห็นบนหน้า</h2>
+    <ul>
+      <li>โหมด: <code>ยัดแผลเท่านั้น</code> / <code>ยัดแผล + ปรับยอด</code> / <code>ปรับยอดเท่านั้น</code></li>
+      <li>ตรวจ: <b>Max Lost</b> และ <b>Max Profit</b></li>
+      <li>กล่อง: ตัวอย่างการเปลี่ยนแปลง (ก่อน/หลัง)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>วิดีโออ้างอิง (V1)</h2>
+    <p class="hint">ลิงก์: https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s</p>
+    <iframe src="https://www.youtube.com/embed/mJ-QHJQT8v4?start=6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
 </body>
 </html>
