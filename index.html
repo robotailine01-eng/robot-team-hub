@@ -1,123 +1,110 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ROBOT AI - Team Hub</title>
-  <style>
-    :root{
-      --bg:#07090d;
-      --panel:#0f1622;
-      --panel2:#0c1320;
-      --line:#1b2a3e;
-      --text:#e8eef7;
-      --muted:rgba(232,238,247,.82);
-      --accent:#DCBE7A;
-      --accent2:#B49355;
-      --accent3:#896D3D;
-    }
-    *{box-sizing:border-box}
-    body{font-family:system-ui,Segoe UI,Tahoma; margin:20px; background:radial-gradient(1200px 600px at 20% -10%, rgba(220,190,122,.14), transparent 55%), var(--bg); color:var(--text);}
-    .header{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:14px;}
-    .logo{width:56px; height:56px; border-radius:14px; border:1px solid var(--line); overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.45);}
-    .logo img{width:100%; height:100%; object-fit:cover;}
-    .title h1{margin:0; font-size:20px; letter-spacing:.2px;}
-    .title .sub{margin:2px 0 0; font-size:12px; color:var(--muted);}
-    .topbar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:10px 0 14px;}
-    input{padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:var(--panel2); color:var(--text); min-width:240px; outline:none;}
-    input:focus{border-color:rgba(220,190,122,.55); box-shadow:0 0 0 3px rgba(220,190,122,.12);}
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ROBOT AI – Team Hub | VIP</title>
+<style>
+:root{
+ --bg:#030405;
+ --panel:#080b11;
+ --line:#2a2a2a;
+ --text:#ffffff;
+ --muted:rgba(255,255,255,.75);
+ --gold:#FFD700;
+ --gold-strong:#FFEE99;
+ --gold-glow:rgba(255,215,0,.65);
+}
+*{box-sizing:border-box}
+body{
+ margin:20px;
+ font-family:system-ui,Segoe UI,Tahoma;
+ background:
+ radial-gradient(800px 400px at 20% -10%, rgba(255,215,0,.35), transparent 55%),
+ radial-gradient(600px 300px at 90% 10%, rgba(255,238,153,.25), transparent 60%),
+ linear-gradient(180deg,#020304,#05070b);
+ color:var(--text);
+}
+.header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+.logo{
+ width:64px;height:64px;border-radius:18px;overflow:hidden;
+ border:2px solid var(--gold);
+ box-shadow:0 0 25px var(--gold-glow),0 18px 60px rgba(0,0,0,.8)
+}
+.logo img{width:100%;height:100%;object-fit:cover}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{font-size:13px;color:var(--muted)}
 
-    .nav{display:flex; gap:10px; flex-wrap:wrap; margin:8px 0 16px;}
-    .pill{display:inline-block; padding:9px 12px; border-radius:999px; background:linear-gradient(180deg, rgba(220,190,122,.14), rgba(220,190,122,.06)); border:1px solid rgba(220,190,122,.30); color:var(--text); text-decoration:none;}
-    .pill:hover{border-color:rgba(220,190,122,.55);}
-    .hint{color:var(--muted); font-size:12px; padding:9px 12px;}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 20px}
+.pill{
+ padding:10px 18px;border-radius:999px;
+ background:linear-gradient(180deg,var(--gold-strong),var(--gold));
+ border:1px solid #ffcf40;
+ color:#111;font-weight:800;text-decoration:none;
+ box-shadow:0 6px 22px rgba(255,215,0,.55)
+}
+.pill:hover{filter:brightness(1.1)}
 
-    table{width:100%; border-collapse:collapse; background:linear-gradient(180deg, rgba(15,22,34,.92), rgba(12,19,32,.92)); border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:0 16px 50px rgba(0,0,0,.35);}
-    th,td{padding:12px; border-bottom:1px solid rgba(27,42,62,.9); text-align:left;}
-    th{background:rgba(12,19,32,.9); font-weight:700; color:rgba(232,238,247,.9);}
-    tr:hover td{background:rgba(220,190,122,.05);}
+table{
+ width:100%;border-collapse:collapse;border-radius:20px;overflow:hidden;
+ background:linear-gradient(180deg,#0a0d14,#06080c);
+ border:1px solid #3a3a3a;
+ box-shadow:0 24px 80px rgba(0,0,0,.75)
+}
+th,td{padding:14px;border-bottom:1px solid #242424}
+th{
+ background:#05070c;
+ color:var(--gold);
+ font-weight:800;
+ letter-spacing:.4px
+}
+tr:hover td{background:rgba(255,215,0,.08)}
 
-    a.btn{display:inline-block; padding:8px 12px; border-radius:12px; background:linear-gradient(180deg, rgba(220,190,122,.16), rgba(220,190,122,.08)); border:1px solid rgba(220,190,122,.30); color:var(--text); text-decoration:none; margin-right:6px; white-space:nowrap;}
-    a.btn:hover{border-color:rgba(220,190,122,.55);}
-    .tag{display:inline-block; margin-left:8px; font-size:12px; color:rgba(220,190,122,.95);}
-  </style>
+.btn{
+ padding:10px 18px;border-radius:16px;
+ background:linear-gradient(180deg,var(--gold-strong),var(--gold));
+ color:#111;font-weight:900;text-decoration:none;
+ box-shadow:0 8px 26px rgba(255,215,0,.65);
+ margin-right:6px
+}
+.btn:hover{filter:brightness(1.08)}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="logo"><img src="assets/logo.jpg" alt="ROBOT AI Logo"></div>
-    <div class="title">
-      <h1>ROBOT AI – Team Hub <span class="tag">Theme: Logo Gold</span></h1>
-      <div class="sub">ลิงก์ระบบจะเปิดเป็นหน้าต่างปลั๊กอิน (Popup) เพื่อใช้งานเร็วและไม่หลุดหน้า</div>
-    </div>
-  </div>
 
-  <div class="topbar">
-    <input id="q" placeholder="ค้นหาชื่อกลุ่ม..." oninput="filterRows()" />
-  </div>
+<div class="header">
+ <div class="logo"><img src="assets/logo.jpg"></div>
+ <div>
+  <h1>ROBOT AI – Team Hub</h1>
+  <div class="sub">🔥 Gold VIP Casino Theme</div>
+ </div>
+</div>
 
-  <div class="nav">
-    <a class="pill" href="manual.html">📘 คู่มือยัดแผล V2</a>
-    <a class="pill" href="#" onclick="openPlugin('https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s','คู่มือ V1');return false;">▶️ คู่มือ V1 (YouTube)</a>
-    <div class="hint">ทิป: ถ้า Popup ไม่ขึ้น ให้อนุญาต Pop-up สำหรับโดเมน GitHub Pages</div>
-  </div>
+<div class="nav">
+ <a class="pill" href="manual.html">📘 คู่มือยัดแผล V2</a>
+ <a class="pill" href="#" onclick="openPlugin('https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s');return false;">▶️ คู่มือ V1</a>
+</div>
 
-  <table id="tbl">
-    <thead>
-      <tr>
-        <th style="width:60px">no</th>
-        <th>Name</th>
-        <th>หน้าหลัก</th>
-        <th>ยัดแผล</th>
-        <th>แก้แผล</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>ชาลาวัน</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/nav.php','ชาลาวัน - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/dev2.php','ชาลาวัน - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/logging.php','ชาลาวัน - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-      <tr><td>2</td><td>MUAY888</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/nav.php?page=dev','MUAY888 - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/dev2.php','MUAY888 - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/logging.php','MUAY888 - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-      <tr><td>3</td><td>มหาเฮง999</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/nav.php?page=dev','มหาเฮง999 - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/dev2.php','มหาเฮง999 - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/logging.php','มหาเฮง999 - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-      <tr><td>4</td><td>พันธมิตร</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/nav.php?page=dev','พันธมิตร - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/dev2.php','พันธมิตร - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/logging.php','พันธมิตร - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-      <tr><td>5</td><td>รีเจนท์</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/nav.php?page=dev','รีเจนท์ - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/dev2.php','รีเจนท์ - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/logging.php','รีเจนท์ - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-      <tr><td>6</td><td>คนตื่นดูมวย</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/nav.php?page=realtime','คนตื่นดูมวย - หน้าหลัก');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/dev2.php','คนตื่นดูมวย - ยัดแผล');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/logging.php','คนตื่นดูมวย - แก้แผล');return false;">เปิด</a></td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+<thead>
+<tr><th>No</th><th>Name</th><th>หน้าหลัก</th><th>ยัดแผล</th><th>แก้แผล</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>ชาลาวัน</td>
+<td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/nav.php');return false;">เปิด</a></td>
+<td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/dev2.php');return false;">เปิด</a></td>
+<td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/logging.php');return false;">เปิด</a></td>
+</tr>
+</tbody>
+</table>
 
 <script>
-function openPlugin(url,title){
-  const w=Math.min(1200,Math.floor(screen.width*0.9));
-  const h=Math.min(800,Math.floor(screen.height*0.85));
-  const l=Math.floor((screen.width-w)/2), t=Math.floor((screen.height-h)/2);
-  window.open(url,title,`popup=yes,width=${w},height=${h},left=${l},top=${t},resizable=yes,scrollbars=yes`);
-}
-function filterRows(){
-  const q=document.getElementById('q').value.toLowerCase();
-  document.querySelectorAll('#tbl tbody tr').forEach(r=>{
-    r.style.display=r.children[1].innerText.toLowerCase().includes(q)?'':'none';
-  });
+function openPlugin(url){
+ const w=Math.min(1200,screen.width*0.9);
+ const h=Math.min(800,screen.height*0.85);
+ window.open(url,'plugin',`width=${w},height=${h},resizable=yes,scrollbars=yes`);
 }
 </script>
+
 </body>
 </html>
