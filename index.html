@@ -9,17 +9,27 @@
     table{width:100%; border-collapse:collapse; background:#101826; border-radius:12px; overflow:hidden;}
     th,td{padding:12px; border-bottom:1px solid #1e2a3a; text-align:left;}
     th{background:#0f1724; font-weight:700;}
-    a.btn{display:inline-block; padding:8px 10px; border-radius:10px; background:#1b2a40; color:#e8eef7; text-decoration:none; margin-right:6px;}
+    a.btn{display:inline-block; padding:8px 10px; border-radius:10px; background:#1b2a40; color:#e8eef7; text-decoration:none; margin-right:6px; white-space:nowrap;}
     a.btn:hover{background:#233552;}
     .tag{font-size:12px; opacity:.8}
     .top{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px;}
     input{padding:10px 12px; border-radius:10px; border:1px solid #203048; background:#0f1724; color:#e8eef7; min-width:240px;}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 16px;}
+    .pill{display:inline-block; padding:8px 10px; border-radius:999px; background:#0f1724; border:1px solid #203048; color:#e8eef7; text-decoration:none;}
+    .pill:hover{background:#132033;}
+    .muted{opacity:.85}
   </style>
 </head>
 <body>
   <div class="top">
     <h2 style="margin:0">ROBOT AI – Team Hub <span class="tag">(Popup Plugin)</span></h2>
     <input id="q" placeholder="ค้นหาชื่อกลุ่ม..." oninput="filterRows()" />
+  </div>
+
+  <div class="nav">
+    <a class="pill" href="manual.html">📘 คู่มือยัดแผล V2</a>
+    <a class="pill" href="#" onclick="openPlugin('https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s','คู่มือ V1');return false;">▶️ คู่มือ V1 (YouTube)</a>
+    <span class="muted">ทิป: ลิงก์ระบบจะเปิดเป็นหน้าต่างปลั๊กอิน (Popup)</span>
   </div>
 
   <table id="tbl">
@@ -30,44 +40,44 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>ชาลาวัน</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/nav.php','ชาลาวัน');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/dev2.php','ชาลาวัน');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/logging.php','ชาลาวัน');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/nav.php','ชาลาวัน - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/dev2.php','ชาลาวัน - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/KWAN/logging.php','ชาลาวัน - แก้แผล');return false;">เปิด</a></td>
       </tr>
       <tr><td>2</td><td>MUAY888</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/nav.php?page=dev','MUAY888');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/dev2.php','MUAY888');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/logging.php','MUAY888');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/nav.php?page=dev','MUAY888 - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/dev2.php','MUAY888 - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY02/logging.php','MUAY888 - แก้แผล');return false;">เปิด</a></td>
       </tr>
       <tr><td>3</td><td>มหาเฮง999</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/nav.php?page=dev','มหาเฮง999');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/dev2.php','มหาเฮง999');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/logging.php','มหาเฮง999');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/nav.php?page=dev','มหาเฮง999 - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/dev2.php','มหาเฮง999 - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY03/logging.php','มหาเฮง999 - แก้แผล');return false;">เปิด</a></td>
       </tr>
       <tr><td>4</td><td>พันธมิตร</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/nav.php?page=dev','พันธมิตร');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/dev2.php','พันธมิตร');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/logging.php','พันธมิตร');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/nav.php?page=dev','พันธมิตร - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/dev2.php','พันธมิตร - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY04/logging.php','พันธมิตร - แก้แผล');return false;">เปิด</a></td>
       </tr>
       <tr><td>5</td><td>รีเจนท์</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/nav.php?page=dev','รีเจนท์');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/dev2.php','รีเจนท์');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/logging.php','รีเจนท์');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/nav.php?page=dev','รีเจนท์ - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/dev2.php','รีเจนท์ - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/MUAY05/logging.php','รีเจนท์ - แก้แผล');return false;">เปิด</a></td>
       </tr>
       <tr><td>6</td><td>คนตื่นดูมวย</td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/nav.php?page=realtime','คนตื่นดูมวย');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/dev2.php','คนตื่นดูมวย');return false;">เปิด</a></td>
-        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/logging.php','คนตื่นดูมวย');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/nav.php?page=realtime','คนตื่นดูมวย - หน้าหลัก');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/dev2.php','คนตื่นดูมวย - ยัดแผล');return false;">เปิด</a></td>
+        <td><a class="btn" href="#" onclick="openPlugin('https://airobotline.com/robot06/logging.php','คนตื่นดูมวย - แก้แผล');return false;">เปิด</a></td>
       </tr>
     </tbody>
   </table>
 
 <script>
 function openPlugin(url,title){
- const w=Math.min(1200,screen.width*0.9);
- const h=Math.min(800,screen.height*0.85);
- const l=(screen.width-w)/2,t=(screen.height-h)/2;
- window.open(url,title,`width=${w},height=${h},left=${l},top=${t},resizable=yes,scrollbars=yes`);
+ const w=Math.min(1200,Math.floor(screen.width*0.9));
+ const h=Math.min(800,Math.floor(screen.height*0.85));
+ const l=Math.floor((screen.width-w)/2), t=Math.floor((screen.height-h)/2);
+ window.open(url,title,`popup=yes,width=${w},height=${h},left=${l},top=${t},resizable=yes,scrollbars=yes`);
 }
 function filterRows(){
  const q=document.getElementById('q').value.toLowerCase();

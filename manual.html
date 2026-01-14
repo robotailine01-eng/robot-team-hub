@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>คู่มือยัดแผล V2</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Tahoma; margin:20px; background:#0b0f14; color:#e8eef7; line-height:1.6;}
+    a{color:#9fd3ff}
+    .wrap{max-width:980px; margin:auto;}
+    .card{background:#101826; border:1px solid #1e2a3a; border-radius:14px; padding:16px; margin:12px 0;}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:#0f1724; border:1px solid #203048; margin-right:8px; font-size:13px;}
+    h1{margin:0 0 10px}
+    h2{margin:0 0 8px; font-size:18px}
+    ul{margin:8px 0 0 18px}
+    .btn{display:inline-block; padding:10px 12px; border-radius:12px; background:#1b2a40; color:#e8eef7; text-decoration:none; margin-right:8px;}
+    .btn:hover{background:#233552;}
+    .warn{color:#ffd38a}
+    .ok{color:#9cffb0}
+    .grid{display:grid; grid-template-columns:1fr; gap:10px}
+    @media (min-width:900px){ .grid{grid-template-columns:1fr 1fr;} }
+    iframe{width:100%; aspect-ratio:16/9; border:0; border-radius:14px; overflow:hidden;}
+    code{background:#0f1724; padding:2px 6px; border-radius:8px; border:1px solid #203048}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <h1>คู่มือยัดแผล V2</h1>
+      <span class="pill">Dev2 / ยัดแผล</span>
+      <span class="pill">ปรับยอด</span>
+      <span class="pill">Realtime</span>
+    </div>
+
+    <div class="card">
+      <a class="btn" href="index.html">⬅️ กลับหน้า Team Hub</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s">▶️ คู่มือ V1 (YouTube)</a>
+    </div>
+
+    <div class="card">
+      <h2>สรุปโหมดการทำงาน</h2>
+      <ul>
+        <li><b>โหมดยัดเท่านั้น</b> — ยัดแผล “คู่ปัจจุบันทันที” (สำหรับแผลที่ยังไม่ประกาศผล)</li>
+        <li><b>โหมดยัดแผล + ปรับยอด</b> — เลือกรอบเพื่อยัดแผลย้อนหลัง + เพิ่ม/ปรับยอดได้เสีย (สำหรับแผลที่ประกาศผลแล้ว)</li>
+        <li><b>โหมดปรับยอดเท่านั้น</b> — สำหรับปรับยอดกรณี “เผลอปรับผิด” หรือ “ยัดผิดจากโหมดอื่น”</li>
+      </ul>
+      <div class="warn" style="margin-top:10px;"><b>สำคัญ:</b> เลือกโหมดให้ถูกก่อนกดทำรายการ เพื่อลดความผิดพลาด</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>1) โหมดยัดเท่านั้น (คู่ปัจจุบัน)</h2>
+        <ul>
+          <li>เลือกโหมด <code>ยัดแผลเท่านั้น</code></li>
+          <li>เลือกรอบ: ปกติเป็น “รอบที่กำลังเล่น”</li>
+          <li>เลือกผล (แดง/น้ำเงิน/เสมอ)</li>
+          <li>ตรวจ <b>Max Lost / Max Profit</b> เพื่อเช็กผลกระทบคร่าว ๆ</li>
+          <li>กดปุ่ม <b>บันทึกแผล</b></li>
+        </ul>
+        <div class="ok" style="margin-top:10px;">เหมาะสำหรับ: แผลยังไม่ประกาศผล / ต้องการยัดแผลทันที</div>
+      </div>
+
+      <div class="card">
+        <h2>2) โหมดยัดแผล + ปรับยอด (ย้อนหลัง)</h2>
+        <ul>
+          <li>เลือกโหมด <code>ยัดแผล + ปรับยอด</code></li>
+          <li>เลือกรอบที่ต้องการ “ยัดแผลหาย” (แผลประกาศแล้ว)</li>
+          <li>ระบบจะแสดงตัวอย่างการเปลี่ยนแปลง:
+            <ul>
+              <li>ยอดได้เสียรอบนี้ (ก่อน/หลัง)</li>
+              <li>เครดิตรวม (ก่อน/หลัง)</li>
+              <li>ยอดที่ปรับ</li>
+            </ul>
+          </li>
+          <li>ตรวจสอบตัวเลขก่อนกดบันทึกทุกครั้ง</li>
+        </ul>
+        <div class="ok" style="margin-top:10px;">เหมาะสำหรับ: แผลประกาศแล้ว แต่ต้องยัดแผลย้อนหลัง + ปรับยอดตามจริง</div>
+      </div>
+
+      <div class="card">
+        <h2>3) โหมดปรับยอดเท่านั้น</h2>
+        <ul>
+          <li>เลือกโหมด <code>ปรับยอดเท่านั้น</code></li>
+          <li>กรอก <b>ยอดที่ต้องปรับ</b> (บวก/ลบ ตามกรณี)</li>
+          <li>ดูตัวอย่างผลลัพธ์ (ก่อน/หลัง) เพื่อยืนยัน</li>
+          <li>กดปุ่ม <b>ปรับยอดเท่านั้น</b></li>
+        </ul>
+        <div class="warn" style="margin-top:10px;">ใช้เมื่อ: เผลอปรับผิด / ยัดผิดจากโหมดอื่น แล้วต้องแก้ยอดให้ถูก</div>
+      </div>
+
+      <div class="card">
+        <h2>เช็กก่อนกดบันทึก (Checklist)</h2>
+        <ul>
+          <li>โหมดถูกต้อง (ยัด/ยัด+ปรับ/ปรับอย่างเดียว)</li>
+          <li>รอบถูกต้อง (รอบปัจจุบัน หรือรอบย้อนหลังที่ตั้งใจ)</li>
+          <li>ผลถูกต้อง (แดง/น้ำเงิน/เสมอ)</li>
+          <li>ตรวจ <b>Max Lost / Max Profit</b> และตัวอย่าง “ก่อน/หลัง”</li>
+          <li>ถ้าต้องปรับยอด: เช็กเครื่องหมาย <b>+ / -</b> ให้ถูก</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>วิดีโออ้างอิง (V1)</h2>
+      <p>ลิงก์: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s">https://www.youtube.com/watch?v=mJ-QHJQT8v4&t=6s</a></p>
+      <iframe src="https://www.youtube.com/embed/mJ-QHJQT8v4?start=6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="card" style="opacity:.85">
+      <b>หมายเหตุ:</b> หากต้องการให้ “ใส่รูปหน้าจอประกอบ” ในคู่มือหน้านี้
+      ให้ส่งไฟล์ภาพแยก (PNG/JPG) มาเป็นไฟล์เดี่ยว ๆ (ไม่ต้องวาดทับ) แล้วจะจัดวางให้เป็นขั้นตอนแบบมืออาชีพ
+    </div>
+  </div>
+</body>
+</html>
